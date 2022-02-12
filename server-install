@@ -1,0 +1,19 @@
+# Server Installation
+Step by Step Guide for how to install a Ubuntu 20.4 Server with Traefik an Docker
+
+* I. Create New User
+Connect to your server via ssh and create a new user with sudo privileges. Please replace sami with an own username.
+```
+ssh root@<ip-address-server>
+adduser sami
+usermod -aG sudo sami
+```
+If you already have a ssh key installed copy it to the new user home directory. Otherwise create a new one and skip the next command
+```
+rsync --archive --chown=sami:sami ~/.ssh /home/sami
+```
+
+* II. 
+
+
+
