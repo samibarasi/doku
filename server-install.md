@@ -23,7 +23,7 @@ sudo apt update
 sudo apt upgrade
 ```
 
-## II. Firewall
+## II. Security
 Install UFW (uncomplicated firewall)
 ```
 sudo apt ufw
@@ -45,6 +45,18 @@ sudo ufw enable
 Check Status
 ```
 sudo ufw status
+```
+Deactivate Root Login
+```
+sudo vi /etc/ssh/sshd_config
+```
+Look for PermitRootLogin. Uncomment line and set it to no.
+```
+PermitRootLogin     no
+```
+Look for PasswordAuthentication. Uncomment line and set it to no.
+```
+PasswordAuthentication no
 ```
 
 
