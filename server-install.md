@@ -24,7 +24,7 @@ sudo apt upgrade
 ```
 
 ## II. Security
-Install UFW (uncomplicated firewall)
+### Install UFW (uncomplicated firewall)
 ```
 sudo apt ufw
 ```
@@ -46,7 +46,7 @@ Check Status
 ```
 sudo ufw status
 ```
-Deactivate Root Login
+### Deactivate Root Login
 ```
 sudo vi /etc/ssh/sshd_config
 ```
@@ -57,6 +57,10 @@ PermitRootLogin     no
 Look for PasswordAuthentication. Uncomment line and set it to no.
 ```
 PasswordAuthentication no
+```
+Restart ssh.
+```
+sudo systemctl restart sshd
 ```
 
 
