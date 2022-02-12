@@ -38,6 +38,10 @@ Allow ssh connection
 ```
 sudo ufw allow OpenSSH
 ```
+See which Rules where added.
+```
+sudo ufw show added
+```
 Enable Firewall
 ```
 sudo ufw enable
