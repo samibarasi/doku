@@ -23,33 +23,6 @@ sudo apt update
 sudo apt upgrade
 ```
 
-## II. Security
-### Install UFW (uncomplicated firewall)
-```
-sudo apt ufw
-```
-List Available Services (optional)
-```
-sudo ufw app list
-Available applications:
-OpenSSH
-```
-Allow ssh connection
-```
-sudo ufw allow OpenSSH
-```
-See which Rules where added.
-```
-sudo ufw show added
-```
-Enable Firewall
-```
-sudo ufw enable
-```
-Check Status
-```
-sudo ufw status
-```
 ### Deactivate Root Login
 ```
 sudo vi /etc/ssh/sshd_config
@@ -66,6 +39,7 @@ Restart ssh.
 ```
 sudo systemctl restart sshd
 ```
+
 ## III. Docker
 ### Install docker-ce
 ```
@@ -81,15 +55,17 @@ echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
+
 ### Install Docker Engine
 ```
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
-Add user to docker group
+Add user to docker group.
 ```
 sudo usermod -aG docker $USER
 ```
+
 ### Install docker-compose
 ```
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -103,6 +79,7 @@ Quellen:
 * https://docs.docker.com/engine/install/ubuntu/
 * https://www.digitalocean.com/community/tutorials/how-to-use-traefik-v2-as-a-reverse-proxy-for-docker-containers-on-ubuntu-20-04
 * https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
+* https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04
 
 
 
