@@ -74,7 +74,7 @@ docker-compose --version
 ```
 
 ### Trouble Shooting
-After install 23.0.1 on the Debian 10 docker is broken.
+After install 23.0.1 on the Ubuntu 20.4 docker is broken.
 Fixed it like that: ```apt install apparmor``` and rebooted host.
 
 Quellen:
